@@ -2,6 +2,7 @@
 # Title: Hate Speech Detection in Videos using Multimodal Information
 
 @author: itzel
+
 Last edited: 2023-06-09
 
 This repository documents the construction of a **Mexican Spanish Video Dataset** that aims to be used for the **hate speech detection task** on the computer science field.

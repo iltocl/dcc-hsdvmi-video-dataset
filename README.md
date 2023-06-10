@@ -1,5 +1,6 @@
 # dcc-hsdvmi-video-dataset
-Title: Hate Speech Detection in Videos using Multimodal Information
+# Title: Hate Speech Detection in Videos using Multimodal Information
+
 @author: itzel
 Last edited: 2023-06-09
 

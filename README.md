@@ -5,9 +5,11 @@
 
 Last edited: 2023-06-09
 
-This repository documents the construction of a **Mexican Spanish Video Dataset** that aims to be used for the **hate speech detection task** on the computer science field.
+This repository documents the construction of a **Mexican Spanish Video Dataset** that aims to be used for the **hate speech detection task** in computer science.
 
-The construction of the dataset consist of the follow phases:
+The construction of the dataset consists of the following phases:
 1. Collecting the videos (In progress...)
-2. Annotating the videos
-3. Formalizing the dataset
+    1.1 Delimiting a list of hate speech (HS) words to be used as seeds
+    1.2          
+3. Annotating the videos
+4. Formalizing the dataset

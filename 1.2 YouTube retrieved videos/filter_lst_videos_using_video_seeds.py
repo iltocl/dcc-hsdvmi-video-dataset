@@ -22,19 +22,23 @@ import pandas as pd
 import os
 
 # Set up the API key and build the YouTube service
-api_key = "AIzaSyCLWS-TGljYIdTC1GsfOGV_OAN6O0AIZ9M"
-youtube = build('youtube', 'v3', developerKey=api_key)
+#api_key = "AIzaSyCLWS-TGljYIdTC1GsfOGV_OAN6O0AIZ9M" # from itzel.tlelo
+api_key = "AIzaSyB2PDOCPXKv-oOtONyc-sn2sDFeodL23Rg" # from itztleco
+
+youtube = build('youtube', 'v2', developerKey=api_key)
 
 def get_related_videos(seed_video_id, n):
     # NOTE: Daily quota is 10,000 and search request is 100 units
+    
+    # IMPORTANT: The parameter relatedToVideoId has been DEPRECATED since August 7, 2023
+    # https://developers.google.com/youtube/v3/revision_history#june-12,-2023
+    
     search_response = youtube.search().list(
-        part='snippet',
-        relatedToVideoId=seed_video_id,
         type='video',
+        relatedToVideoId=seed_video_id,
+        part='snippet',
         maxResults=n,
         relevanceLanguage="es",  
-        regionCode="MX",
-        videoDuration="medium",
     ).execute()
     # videoDuration with medium parameter considers videos between 4 and 20 min long 
     # YT API https://developers.google.com/youtube/v3/docs/search/list
@@ -56,10 +60,10 @@ def get_related_videos_from_lst_of_VIDEO_IDS(lst_all_related_videos, lst_ids_see
         # Call the function to get the related videos
         related_videos = get_related_videos(video_id, n)
         # Print the related video details
-        #for video in related_videos:
-        #    print("Video ID:", video[0])
-        #    print("Title:", video[1])
-        #    print("--------------------")
+        for video in related_videos:
+            print("Video ID:", video[0])
+            print("Title:", video[1])
+            print("--------------------")
         for v in related_videos:
             lst_all_related_videos.append(v) 
     return lst_all_related_videos
@@ -103,14 +107,37 @@ OUTPUT: A data frame with the data of the n related videos
 """   
 # For Option 1 uncomment/use this code
 dir_dwnld_videos = "./1.2.2 YT videos (downloaded)/"
-dir_name = "dwnld-yt-filtered-videos-from-lst-sre-n3-vpw-relevant" # edit the directory you wanna use
+os.listdir(dir_dwnld_videos)
+
+dir_name = "dwnld-yt-filtered-videos-from-lst-hatebase-n10-vpw-relevant" # edit the directory you wanna use
+#dir_name = "dwnld-yt-filtered-videos-from-lst-sre-n10-vpw-relevant" # edit the directory you wanna use
 dir_path = dir_dwnld_videos + dir_name
+#os.listdir(dir_path)
 
 lst_ids_seed_videos = get_lst_files_from_directory(dir_path)
 
+# To eliminate video titles and only work with the available IDs
+for i in lst_ids_seed_videos:
+    if len(i) > 11:
+        lst_ids_seed_videos.remove(i)
+        print(i)
+
+
+output_file_path = "./1.2.1 YT videos (lists of IDs)/"
+output_file_name = '-'.join([str(item) for item in dir_name.split('-')[1:]])
+print(output_file_name)
+
+# SAVING THE SEED VIDEO IDs INTO A CSV 
+dict = {'Video ID': lst_ids_seed_videos}
+df = pd.DataFrame(dict)
+df.to_csv(output_file_path + output_file_name + '.csv')
+
+# -------------------------------------------------------------
+
 # For Option 2 uncomment/use this code
-#csv_file = "relevant-filtered-videos-n10-from-hs-word-seeds-hatebase.csv"
-#lst_ids_seed_videos = list(pd.read_csv(csv_file)['Video ID'])
+#csv_file = output_file_path + "yt-filtered-videos-from-lst-hatebase-n10-vpw-relevant.csv"
+csv_file = output_file_path + "yt-filtered-videos-from-lst-sre-n10-vpw-relevant.csv"
+lst_ids_seed_videos = list(pd.read_csv(csv_file)['Video ID'])
 
 
 # Retrieving related videos from video seeds
@@ -123,14 +150,22 @@ df_related_videos = pd.DataFrame(lst_related_videos,
                                      columns =['Video ID', 'Video URL', 'Video Title',
                                                'Channel ID', 'Channel Name', 'Seed Video ID'])
 
-output_file_path = "./1.2.1 YT videos (lists of IDs)/"
-output_file_name = '_'.join([str(item) for item in dir_name.split('-')[1:]])
-print(output_file_name)
 
-# SAVING THE SEED VIDEO IDs INTO A CSV 
-dict = {'Video ID': lst_ids_seed_videos}
-df = pd.DataFrame(dict)
-df.to_csv(output_file_path + output_file_name + '.csv')
+
 # SAVING THE RELATED VIDEO IDs INTO A CSV
-df_related_videos.to_csv(output_file_path + output_file_name + "_related(from seeds).csv")
+df_related_videos.to_csv(output_file_path + output_file_name + "-related(from seeds).csv")
     
+
+# -------------------------------------------------------
+
+# Provide the YouTube video ID
+video_id = "4MymINGlSqo"
+related_videos = get_related_videos(video_id, 5)
+
+lst_related_videos = []
+for v in related_videos:
+    lst_related_videos.append(v) 
+    #print(v)
+df_related_videos = pd.DataFrame(lst_related_videos,
+                                     columns =['Video ID', 'Video URL', 'Video Title',
+                                               'Channel ID', 'Channel Name', 'Seed Video ID'])

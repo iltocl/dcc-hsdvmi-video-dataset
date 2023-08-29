@@ -12,7 +12,7 @@ OUTPUT
 
 NOTES:
     - Be careful to be on path: 
-        D:\itzel\PhD Computer Science\github-codes\dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
+        .\dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
     - api key source: 
         https://console.cloud.google.com/apis/credentials?project=dcc-hsdvmi-yt&supportedpurview=project
     

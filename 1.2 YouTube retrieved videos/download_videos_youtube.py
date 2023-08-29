@@ -1,20 +1,14 @@
 # -*- coding: utf-8 -*-
-# pip install pytube==10.4.1
-# pip install -U get-video-properties
+# !pip install pytube==10.4.1
+# !pip install -U get-video-properties
 
 """
-This code receives a list of youtube video IDs and download the videos.
+This code receives a list of youtube video IDs and download the videos into a directory
 
 INPUT
-    - A csv file that contains a list of Video IDs (YouTube) 
+    - A csv file that contains a list of Video IDs (from YouTube) 
 OUTPUT
     - A folder with the downloaded videos
-
-NOTES:
-    - Be careful to be on path: 
-        .\dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
-    - api key source: 
-        https://console.cloud.google.com/apis/credentials?project=dcc-hsdvmi-yt&supportedpurview=project
     
 @author: itzel
 last edited: 23-08-22
@@ -63,7 +57,6 @@ def download_videos_set(input_csv_file, output_dir_path):
 if __name__ == "__main__":
     path_to_yt_video_lsts = "1.2.1 YT videos (lists of IDs)/"
     # INPUT CSV FILES
-    # NOTE: For videos retrieved from seed videos just add -relevant to the input_csv names
     input_csv = path_to_yt_video_lsts + "yt-filtered-videos-from-lst-sre-n3-vpw.csv" 
     #input_csv = path_to_yt_video_lsts + "yt-filtered-videos-from-lst-hatebase-n3-vpw.csv"
     

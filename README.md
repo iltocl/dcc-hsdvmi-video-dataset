@@ -16,17 +16,20 @@ The construction of the dataset consists of the following phases:
 - [x] 1.2 YouTube retrieved videos
    
    First, videos are retrieved using a hate speech words list. Second, relevant videos are manually chosen as relevant from the original retrieved ones. Third, using the relevant videos previously selected these became seeds to retrieve more similar videos. Also, retrieving videos considering specific YouTube channels and/or playlists is considered.
-   - [ ] 1.2.1 YT videos (lists of IDs). This folder contains lists of YouTube video IDs filtered by using the hate speech lists.   
-   - [ ] 1.2.2 YT videos (downloaded). This folder contains the downloaded videos, organized by:
-      - [ ] Folders of downloaded (dwnld_) videos directly from YouTube using the lists of IDs in 1.2.1
-      - [ ] Folders of relevant (-relevant) videos manually selected from the original downloaded ones (these videos will serve as seeds to search for similar ones)
-      - [ ] Folders of related (-related) videos that were retrieved using the relevant ones as seeds
-      - [ ] Folders with videos retrieved from specific manually identified channels or playlists (-channel-channelname, -playlist-playlistname)
+   - [x] 1.2.1 YT videos (lists of IDs). This folder contains lists of YouTube video IDs filtered by using the hate speech lists.   
+   - [x] 1.2.2 YT videos (downloaded). This folder contains the downloaded videos, organized by:
+      - [x] Folders of downloaded (dwnld_) videos directly from YouTube using the lists of IDs in 1.2.1
+      - [x] Folders of relevant (-relevant) videos manually selected from the original downloaded ones (these videos will serve as seeds to search for similar ones)
+      - [x] Folders of related (-related) videos that were retrieved using the relevant ones as seeds
+      - [x] Folders with videos retrieved from specific manually identified channels or playlists (-channel-channelname, -playlist-playlistname)
 
 ### 2. Videos dataset
 Once enough videos are retrieved/downloaded it is necessary to segment each one to fragments of 1-minute length.
-- [ ] 2.1 Video Segments
+- [x] 2.1 Video Segments
  
 ### 3. Annotating the videos
-   3.1
+- [ ] 3.1 hsdvmi-video-annotation-webapp 
+   
 ### 4. Formalizing the dataset
+- [ ] train (%)
+- [ ] test (%)

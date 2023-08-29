@@ -9,8 +9,6 @@ OUTPUT
     - A directory with the downloaded videos
 
 NOTES:
-    - Be careful to be on path: 
-        .\dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
     - It is recommendable that the playlist url corresponds to the url from the first video on the list 
     (in order to also retrieve the channel name)
     

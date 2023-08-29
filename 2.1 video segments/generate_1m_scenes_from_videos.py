@@ -1,18 +1,16 @@
 # -*- coding: utf-8 -*-
 
 """
-This script splits given videos into 1 min scenes
+This script splits given videos into scenes of a certain length (for this case 1 min)
 
 INPUT
-    - A list of the Video IDs that will serve as the seeds
+    - A directory of videos 
 OUTPUT
-    - A directory with the related videos and a csv file with the data of the related videos
+    - A directory with the segmented videos
 
 NOTES:
-    - Be careful to be on path: 
-        .\dcc-hsdvmi-video-dataset\2.1 video segments
     - It is required to install Ffmpeg
-    - The limit video duration could be specified
+    - The limit video duration (time_limit_minutes) should be specified in minutes
 
 @author: itzel
 last-edited: 23-06-27

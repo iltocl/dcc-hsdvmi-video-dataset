@@ -10,7 +10,7 @@ OUTPUT
 
 NOTES:
     - Be careful to be on path: 
-        D:\itzel\PhD Computer Science\github-codes\dcc-hsdvmi-video-dataset\2.1 video segments
+        .\dcc-hsdvmi-video-dataset\2.1 video segments
     - It is required to install Ffmpeg
     - The limit video duration could be specified
 

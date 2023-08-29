@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 # pip install --upgrade google-api-python-client
 """
-This code receives a list of words.
-Each one is used as a query to filter youtube video ids related to that word.
+This code receives a list of words and each one is used as a query to filter youtube video ids related to that word.
 
 INPUT
     - A csv file that contains a list of words
@@ -11,10 +10,8 @@ OUTPUT
     - A csv file that contains information of the retrieved video (Query, Video ID, Video URL, Title)
 
 NOTES:
-    - Be careful to be on path: 
-        \dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
-    - api key source: 
-        https://console.cloud.google.com/apis/credentials?project=dcc-hsdvmi-yt&supportedpurview=project
+    - You need to create a API_KEY from the project were you are using the YouTube API  
+    https://developers.google.com/youtube/v3/docs/search/list
     
 @author: itzel
 last edited: 23-08-22
@@ -45,7 +42,6 @@ def search_videos(query, n):
         videoDuration="medium",
     ).execute()
     # videoDuration with medium parameter considers videos between 4 and 20 min long 
-    # YT API https://developers.google.com/youtube/v3/docs/search/list
     
     retrieved_videos = []
     # Extracting video information from the API response
@@ -58,7 +54,6 @@ def search_videos(query, n):
         channel_name = item['snippet']['channelTitle']
 
         retrieved_videos.append((word, video_id, video_url, video_title, channel_id, channel_name))
-        # Time sleep is necessary because the YT API establish a limited number of queries in certain time  
         time.sleep(2)  
     return retrieved_videos
 

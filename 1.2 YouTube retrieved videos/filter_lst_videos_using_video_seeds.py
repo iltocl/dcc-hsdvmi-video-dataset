@@ -9,7 +9,7 @@ OUTPUT
 
 NOTES:
     - Be careful to be on path: 
-        D:\itzel\PhD Computer Science\github-codes\dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
+        \dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
     - api key source: 
         https://console.cloud.google.com/apis/credentials?project=dcc-hsdvmi-yt&supportedpurview=project
     
@@ -22,9 +22,7 @@ import pandas as pd
 import os
 
 # Set up the API key and build the YouTube service
-#api_key = "AIzaSyCLWS-TGljYIdTC1GsfOGV_OAN6O0AIZ9M" # from itzel.tlelo
-api_key = "AIzaSyB2PDOCPXKv-oOtONyc-sn2sDFeodL23Rg" # from itztleco
-
+api_key = "" 
 youtube = build('youtube', 'v2', developerKey=api_key)
 
 def get_related_videos(seed_video_id, n):

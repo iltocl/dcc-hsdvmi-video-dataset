@@ -12,7 +12,7 @@ OUTPUT
 
 NOTES:
     - Be careful to be on path: 
-        D:\itzel\PhD Computer Science\github-codes\dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
+        \dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
     - api key source: 
         https://console.cloud.google.com/apis/credentials?project=dcc-hsdvmi-yt&supportedpurview=project
     
@@ -27,7 +27,7 @@ import time
 import os
 
 # Set up the API key and build the YouTube service
-api_key = "AIzaSyCLWS-TGljYIdTC1GsfOGV_OAN6O0AIZ9M" 
+api_key = "" 
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 def search_videos(query, n):
@@ -80,7 +80,7 @@ def scrape_youtube_videos(input_csv_file, output_csv_file_name, n):
         writer.writerows(lst_all_videos)
 
 if __name__ == "__main__":
-    #path_general = "D:/itzel/PhD Computer Science/github-codes/dcc-hsdvmi-video-dataset/"
+    #path_general = "/dcc-hsdvmi-video-dataset/"
     
     path_words_lists = "../1.1 hate speech words lists/"
     # INPUT CSV FILES

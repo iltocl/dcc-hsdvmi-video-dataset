@@ -8,10 +8,8 @@ OUTPUT
     - A directory with the related videos and a csv file with the data of the related videos
 
 NOTES:
-    - Be careful to be on path: 
-        \dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
-    - api key source: 
-        https://console.cloud.google.com/apis/credentials?project=dcc-hsdvmi-yt&supportedpurview=project
+    - You need to create a API_KEY from the project were you are using the YouTube API  
+    https://developers.google.com/youtube/v3/docs/search/list
     
 @author: itzel
 last edited: 23-08-25
@@ -26,7 +24,7 @@ api_key = ""
 youtube = build('youtube', 'v2', developerKey=api_key)
 
 def get_related_videos(seed_video_id, n):
-    # NOTE: Daily quota is 10,000 and search request is 100 units
+    # IMPORTANT: Daily quota is 10,000 and search request is 100 units using the YouTube API
     
     # IMPORTANT: The parameter relatedToVideoId has been DEPRECATED since August 7, 2023
     # https://developers.google.com/youtube/v3/revision_history#june-12,-2023
@@ -39,7 +37,6 @@ def get_related_videos(seed_video_id, n):
         relevanceLanguage="es",  
     ).execute()
     # videoDuration with medium parameter considers videos between 4 and 20 min long 
-    # YT API https://developers.google.com/youtube/v3/docs/search/list
     
     # Extract the related video details
     related_videos = []

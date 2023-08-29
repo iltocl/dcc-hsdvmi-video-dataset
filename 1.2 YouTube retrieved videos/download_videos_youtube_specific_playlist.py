@@ -10,7 +10,7 @@ OUTPUT
 
 NOTES:
     - Be careful to be on path: 
-        D:\itzel\PhD Computer Science\github-codes\dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
+        .\dcc-hsdvmi-video-dataset\1.2 YouTube retrieved videos
     - It is recommendable that the playlist url corresponds to the url from the first video on the list 
     (in order to also retrieve the channel name)
     
@@ -69,6 +69,7 @@ def download_videos_from_yt_playlist(playlist_url, output_dir_path):
                 
 if __name__ == "__main__":
     playlist_url = input("YouTube playlist URL: ")    
+    # example: https://www.youtube.com/watch?v=kzEJiRtR950&list=PLBbNRCLRgGJu_6Dpyw5HZB-pcqw6OcFbT&ab_channel=LaRosadeGuadalupe
     channel_name = playlist_url.split('=')[-1]
     output_dir= "1.2.2 YT videos (downloaded)/dwnld-yt-playlist-" + channel_name
     

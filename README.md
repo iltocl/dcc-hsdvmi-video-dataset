@@ -34,6 +34,7 @@ Then, this pool of videos is chunked into batches of n number of videos in order
 - [x] 3.1 video segments to batches
 
 ### 4. Annotating the videos
+The annotation webapp built for this project can be accessed through the following link.
 - [ ] https://github.com/iltocl/hsdvmi-video-annotation-webapp.git
    
 ### 5. Formalizing the dataset

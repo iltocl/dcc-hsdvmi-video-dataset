@@ -3,8 +3,6 @@
 
 @author: itzel
 
-Last edited: 2023-09-16
-
 This repository documents the construction of a **Mexican Spanish Video Dataset** that aims to be used for the **hate speech detection task** in computer science.
 
 The construction of the dataset consists of the following phases:

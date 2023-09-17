@@ -3,7 +3,7 @@
 
 @author: itzel
 
-Last edited: 2023-06-09
+Last edited: 2023-09-16
 
 This repository documents the construction of a **Mexican Spanish Video Dataset** that aims to be used for the **hate speech detection task** in computer science.
 
@@ -36,8 +36,7 @@ Then, this pool of videos is chunked into batches of n number of videos in order
 - [x] 3.1 video segments to batches
 
 ### 4. Annotating the videos
-- [ ] 4.1 hsdvmi-video-annotation-webapp
-- [ ] 
+- [ ] https://github.com/iltocl/hsdvmi-video-annotation-webapp.git
    
 ### 5. Formalizing the dataset
 - [ ] train (%)

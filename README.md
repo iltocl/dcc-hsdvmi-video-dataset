@@ -26,10 +26,19 @@ The construction of the dataset consists of the following phases:
 ### 2. Videos dataset
 Once enough videos are retrieved/downloaded it is necessary to segment each one to fragments of 1-minute length.
 - [x] 2.1 Video Segments
- 
-### 3. Annotating the videos
-- [ ] 3.1 hsdvmi-video-annotation-webapp 
+
+### 3. Video segments to batches
+To build the pool of videos that will be labeled as the dataset only the relevant, related and playlist ones are considered. This because:
+- relevant: include videos manually selected from the original filtering from YouTube
+- related: include videos retrieved by using the relevant ones as seeds
+- playlist: include videos from playlists manually identified from certain YouTube channels
+Then, this pool of videos is chunked into batches of n number of videos in order to facilitate the annotation process. These batches are randomly built.
+- [x] 3.1 video segments to batches
+
+### 4. Annotating the videos
+- [ ] 4.1 hsdvmi-video-annotation-webapp
+- [ ] 
    
-### 4. Formalizing the dataset
+### 5. Formalizing the dataset
 - [ ] train (%)
 - [ ] test (%)

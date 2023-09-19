@@ -1,9 +1,22 @@
-# dcc-hsdvmi-video-dataset
-# Title: Hate Speech Detection in Videos using Multimodal Information
+# A Dataset for Hate Speech Detection in Videos 
 
-@author: itzel
+This is the documentation of the construction of our **Mexican Spanish Video Dataset**. 
+A dataset aimed to be used for the **hate speech detection task**.
 
-This repository documents the construction of a **Mexican Spanish Video Dataset** that aims to be used for the **hate speech detection task** in computer science.
+- [A Dataset for Hate Speech Detection in Videos](#a-dataset-for-hate-speech-detection-in-videos)
+   - [Summary](#summary)
+   - [Getting Started](#getting-started)
+   - [Citation](#citation)
+   - [Acknowledgments](#acknowledgments)
+   - [Media Coverage](#media-coverage)
+
+# Summary
+
+
+
+
+
+
 
 The construction of the dataset consists of the following phases:
 

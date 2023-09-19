@@ -15,7 +15,7 @@ The hate speech detection task has been gaining interest in recent years. Existi
 
 In this regard, we present our _Mexican Spanish Video Dataset_, which is built by collecting YouTube videos with possible hate speech content. 
 
-<img src="https://github.com/v-iashin/v-iashin.github.io/raw/master/images/bmt/bi_modal_transformer.svg" alt="Bi-Modal Transformer with Proposal Generator" width="900">
+<img src="hsdvmi-dataset-creation.PNG" alt="Bi-Modal Transformer with Proposal Generator" width="900">
 
 
 

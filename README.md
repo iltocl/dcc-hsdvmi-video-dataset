@@ -1,6 +1,6 @@
 # A Dataset for Hate Speech Detection in Videos 
 
-This is the documentation of the construction of our **Mexican Spanish Video Dataset**. 
+This repository hosts the documentation of the construction of our **Mexican Spanish Video Dataset**. 
 A dataset aimed to be used for the **hate speech detection task**.
 
 - [A Dataset for Hate Speech Detection in Videos](#a-dataset-for-hate-speech-detection-in-videos)
@@ -11,7 +11,11 @@ A dataset aimed to be used for the **hate speech detection task**.
    - [Media Coverage](#media-coverage)
 
 # Summary
+The hate speech detection task has been gaining interest in recent years. Existing methods address the task for English language-based resources. Then, a lack of experimentation in other languages is notable not only by the language itself but also by the limited availability of datasets.
 
+In this regard, we present our _Mexican Spanish Video Dataset_, which is built by collecting YouTube videos with possible hate speech content. 
+
+<img src="https://github.com/v-iashin/v-iashin.github.io/raw/master/images/bmt/bi_modal_transformer.svg" alt="Bi-Modal Transformer with Proposal Generator" width="900">
 
 
 

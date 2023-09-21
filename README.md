@@ -82,3 +82,5 @@ The annotation webapp built for this project can be accessed through the followi
 
 # Media Coverage
 [(2023, SRE) Guía de lenguaje incluyente y no sexista](https://www.gob.mx/sre/documentos/guia-de-lenguaje-incluyente-y-no-sexista?state=published)
+
+[hatebase website](https://hatebase.org/)

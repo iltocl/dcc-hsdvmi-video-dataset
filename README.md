@@ -62,23 +62,18 @@ For the downloaded videos (1.2.2 YT videos (downloaded)):
 Once the videos were retrieved/downloaded it is necessary to segment each one into scenes. In our case, we decided to segment each video into 1-minute length scenes.
 
 ## 3. Video segments into batches
-A pool of videos 
-
-
-To build the pool of videos that will be labeled as the dataset only the relevant, related and playlist ones are considered. This because:
+A pool of videos that will be labeled as the dataset was comprised of the relevant, related, and playlist videos previously retrieved and segmented. This because:
 - relevant: include videos manually selected from the original filtering from YouTube
 - related: include videos retrieved by using the relevant ones as seeds
 - playlist: include videos from playlists manually identified from certain YouTube channels
-Then, this pool of videos is chunked into batches of n number of videos in order to facilitate the annotation process. These batches are randomly built.
-- [x] 3.1 video segments to batches
 
-### 4. Annotating the videos
-The annotation webapp built for this project can be accessed through the following link.
-- [ ] https://github.com/iltocl/hsdvmi-video-annotation-webapp.git
+Then, this pool of videos is chunked into batches of _n_ number of videos in order to facilitate the annotation process. These batches were built randomly assigning the videos to each batch.
+
+## 4. Annotating the videos
+The annotation web app built for this project can be accessed through the following repository: [hsdvmi-video-annotation-webapp](https://github.com/iltocl/hsdvmi-video-annotation-webapp.git)
    
-### 5. Formalizing the dataset
-- [ ] train (%)
-- [ ] test (%)
+## 5. Formalizing the dataset
+The final dataset is available at []()
 
 # Media Coverage
 - [Guía de lenguaje incluyente y no sexista, SRE 2023](https://www.gob.mx/sre/documentos/guia-de-lenguaje-incluyente-y-no-sexista?state=published)

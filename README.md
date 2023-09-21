@@ -43,14 +43,10 @@ The built up of the dataset consists of:
 ```
 
 ##  1. Collecting the videos 
+First, videos are filtered and downloaded from YouTube (YT) platform using a hate speech (HS) related word lists as seeds. Two lists were used:
+1. A list based on expressions/terms we should avoid in order to use inclusive and non-sexist language. This list is based on the _Guía de lenguaje incluyente y no sexista_ published by the _Secretaría de Relaciones Exteriores_ and include 56 words.
+2. A list based on terms catalogued as offensive in the mexican context. This list is based on the terms obtained by the _hatebase_ website and includes 29 words.
 
-
-
-
-- [x] 1.1 Lists of hate speech (HS) words to be used as seeds
-   - SRE list (56 words)
-   - hatebase list (29 words)
-- [x] 1.2 YouTube retrieved videos
    
    First, videos are retrieved using a hate speech words list. Second, relevant videos are manually chosen as relevant from the original retrieved ones. Third, using the relevant videos previously selected these became seeds to retrieve more similar videos. Also, retrieving videos considering specific YouTube channels and/or playlists is considered.
    - [x] 1.2.1 YT videos (lists of IDs). This folder contains lists of YouTube video IDs filtered by using the hate speech lists.   

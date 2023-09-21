@@ -21,7 +21,7 @@ The hate speech detection task has been gaining interest in recent years. Existi
 
 In this regard, we present our _Mexican Spanish Video Dataset_, which is built by collecting YouTube videos with possible hate speech content. 
 
-<img src="hsdvmi-dataset-creation.PNG" alt="" width="900">
+<img src="hsdvmi-dataset-creation.PNG" alt="Figure for the dataset creation" width="900">
 
 The built up of the dataset consists of:
 - Collecting videos (from YouTube and with possible relation to hate speech content)

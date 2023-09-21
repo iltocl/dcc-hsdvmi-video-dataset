@@ -28,7 +28,7 @@ The built up of the dataset consists of:
 ```
 ├── 1.1 hate speech words lists            # csv files of hate speech related words
 ├── 1.2 YouTube retrieved videos           # filtering and downloading scripts and videos
-│   ├── 1.2.1 YT videos (lists of IDs)     # csv files of filtered YT videos
+│   ├── 1.2.1 YT videos (lists of IDs)     # csv files of lists of filtered YT videos using the hate speech related words lists
 │   ├── 1.2.2 YT videos (downloaded)
 │   ├── download_videos_youtube.py
 │   ├── download_videos_youtube_specific_playlist.py
@@ -44,19 +44,18 @@ The built up of the dataset consists of:
 
 ##  1. Collecting the videos 
 First, videos are filtered and downloaded from YouTube (YT) platform using a hate speech (HS) related word lists as seeds. Two lists were used:
-1. A list based on expressions/terms we should avoid in order to use inclusive and non-sexist language. This list is based on the _Guía de lenguaje incluyente y no sexista_ published by the _Secretaría de Relaciones Exteriores_ and include 56 words.
+1. A list based on expressions/terms we should avoid to use inclusive and non-sexist language. This list is based on the _Guía de lenguaje incluyente y no sexista_ published by the _Secretaría de Relaciones Exteriores_ and include 56 words.
 2. A list based on terms catalogued as offensive in the mexican context. This list is based on the terms obtained by the _hatebase_ website and includes 29 words.
 
-   
-   First, videos are retrieved using a hate speech words list. Second, relevant videos are manually chosen as relevant from the original retrieved ones. Third, using the relevant videos previously selected these became seeds to retrieve more similar videos. Also, retrieving videos considering specific YouTube channels and/or playlists is considered.
-   - [x] 1.2.1 YT videos (lists of IDs). This folder contains lists of YouTube video IDs filtered by using the hate speech lists.   
-   - [x] 1.2.2 YT videos (downloaded). This folder contains the downloaded videos, organized by:
-      - [x] Folders of downloaded (dwnld_) videos directly from YouTube using the lists of IDs in 1.2.1
-      - [x] Folders of relevant (-relevant) videos manually selected from the original downloaded ones (these videos will serve as seeds to search for similar ones)
-      - [x] Folders of related (-related) videos that were retrieved using the relevant ones as seeds
-      - [x] Folders with videos retrieved from specific manually identified channels or playlists (-channel-channelname, -playlist-playlistname)
+Second, we manually identified some relevant videos with possible hate speech content from the original filtered and downloaded ones. These relevant videos were used as seeds to retrieve related/similar ones to that type of content. Also, we manually identified YT channels and playlists with possible hate speech content and retrieved some of the available videos.
 
-### 2. Videos dataset
+For the downloaded videos:   
+- Folders of downloaded videos directly from YouTube using the lists of IDs in 1.2.1 are identified as "dwnld-yt-filtered-videos-from-lst-_hsWordsListName_-_n___-vpw" were n corresponds to the number of videos filtered per word. 
+- Folders of relevant videos manually selected from the original downloaded ones that served as seeds to search for similar ones include the _-relevant_ word in their directory name
+- Folders of related videos that were retrieved using the relevant ones as seeds include the _-related_ word in their directory name
+- Folders that contain the retrieved videos from a manually identified YT channel/playlist are identified with the format "dwnld-yt-_playlist_-_channelName_"
+
+## 2. Videos dataset
 Once enough videos are retrieved/downloaded it is necessary to segment each one to fragments of 1-minute length.
 - [x] 2.1 Video Segments
 

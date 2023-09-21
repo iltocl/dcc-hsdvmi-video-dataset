@@ -17,14 +17,36 @@ In this regard, we present our _Mexican Spanish Video Dataset_, which is built b
 
 <img src="hsdvmi-dataset-creation.PNG" alt="" width="900">
 
+The built up of the dataset consists of:
+- Collecting videos (from YouTube and with possible relation to hate speech content)
+- Annotating the dataset 
+- Formalizing the dataset 
+
+# Getting Started
+
+## Code Structure
+```
+├── 1.1 hate speech words lists            # csv files of hate speech related words
+├── 1.2 YouTube retrieved videos           # filtering and downloading scripts and videos
+│   ├── 1.2.1 YT videos (lists of IDs)     # csv files of filtered YT videos
+│   ├── 1.2.2 YT videos (downloaded)
+│   ├── download_videos_youtube.py
+│   ├── download_videos_youtube_specific_playlist.py
+│   ├── filter_lst_videos_from_youtube.py
+│   ├── filter_lst_videos_using_video_seeds.py
+├── 2.1 video segments                     # segmentating the previously downloaded videos
+│   ├── 2.1.1 video segments
+│   ├── generate_1m_scenes_from_videos.py
+├── 3.1 video segments to batches
+│   └── generate_video_batches.py
+└── README.md
+```
+
+##  1. Collecting the videos 
 
 
 
 
-
-The construction of the dataset consists of the following phases:
-
-###  1. Collecting the videos (In progress...)
 - [x] 1.1 Lists of hate speech (HS) words to be used as seeds
    - SRE list (56 words)
    - hatebase list (29 words)
